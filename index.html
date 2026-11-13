@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Christian Benitez | Portafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <style>
+    :root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; background: #000; }
+    body { font-family: "DM Sans", system-ui, sans-serif; background: #000; color: #d4d4d4; }
+    .display { font-family: "Bricolage Grotesque", "DM Sans", system-ui, sans-serif; }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #ef4444; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body class="antialiased">
+
+  <!-- Barra de navegación: header + nav -->
+  <header class="sticky top-0 z-10 border-b border-neutral-800 bg-black/90 backdrop-blur">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+      <a href="#inicio" class="display text-lg font-extrabold text-white">Christian Benitez<span class="text-red-600">.</span></a>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="#sobre-mi" class="hover:text-red-500">Sobre mí</a></li>
+        <li><a href="#proyectos" class="hover:text-red-500">Proyectos</a></li>
+        <li><a href="#contacto" class="hover:text-red-500">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Presentación -->
+    <section id="inicio" class="mx-auto max-w-5xl px-6 pb-24 pt-24 md:pt-36">
+      <h1 class="display max-w-3xl text-5xl font-extrabold leading-[1.05] text-white md:text-7xl">
+        Hola, soy Christian Benitez. Construyo sitios web claros y fáciles de usar.
+      </h1>
+      <div class="mt-6 h-1 w-24 bg-red-600"></div>
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-neutral-400">
+        Ingeniero de software en formación en la Institución Universitaria Pascual Bravo y administrador de negocios. En Riwi me formo en desarrollo web con HTML, CSS, JavaScript, Bootstrap y Tailwind.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a href="#proyectos" class="rounded-md bg-red-600 px-6 py-3 font-medium text-white transition hover:bg-red-500">Ver proyectos</a>
+        <a href="#contacto" class="rounded-md border border-neutral-700 px-6 py-3 font-medium text-white transition hover:border-red-600">Escríbeme</a>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="border-t border-neutral-900">
+      <div class="mx-auto grid max-w-5xl gap-12 px-6 py-24 md:grid-cols-3">
+        <div>
+          <h2 class="display text-3xl font-extrabold text-white">Sobre mí</h2>
+          <!-- Espacio para tu foto. Cuando la tengas, cambia este div por: <img src="foto.jpg" alt="Christian Benitez" class="mt-8 aspect-[4/5] w-full max-w-[220px] rounded-lg border border-neutral-800 object-cover"> -->
+          <div class="mt-8 flex aspect-[4/5] w-full max-w-[220px] items-center justify-center rounded-lg border border-dashed border-neutral-700 bg-neutral-950 text-center text-sm text-neutral-500" role="img" aria-label="Espacio reservado para la foto de Christian">
+            Tu foto aquí
+          </div>
+        </div>
+        <div class="space-y-5 leading-relaxed md:col-span-2">
+          <p>Soy administrador de negocios y estudio ingeniería de software en la Institución Universitaria Pascual Bravo, mientras me formo en desarrollo web en Riwi. Esa mezcla me permite pensar en lo que necesita un negocio y llevarlo a una página que funcione.</p>
+          <p>Ahora mismo me enfoco en maquetación responsive y en JavaScript: que una página se vea bien en cualquier pantalla y que además haga cosas, como organizar tareas.</p>
+          <ul class="flex flex-wrap gap-2 pt-2 text-sm">
+            <li class="rounded-full border border-neutral-700 px-4 py-1.5">HTML</li>
+            <li class="rounded-full border border-neutral-700 px-4 py-1.5">CSS</li>
+            <li class="rounded-full border border-neutral-700 px-4 py-1.5">JavaScript</li>
+            <li class="rounded-full border border-neutral-700 px-4 py-1.5">Bootstrap</li>
+            <li class="rounded-full border border-red-600 px-4 py-1.5 text-white">Tailwind</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos: 3 tarjetas, columna en móvil y fila desde md -->
+    <section id="proyectos" class="border-t border-neutral-900">
+      <div class="mx-auto max-w-5xl px-6 py-24">
+        <h2 class="display text-3xl font-extrabold text-white">Proyectos</h2>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+          <article class="flex flex-col rounded-lg border border-neutral-800 bg-neutral-950 p-6 transition hover:border-red-600">
+            <h3 class="display text-xl font-semibold text-white">Rueda Libre</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">Sitio de varias páginas para un servicio de alquiler de bicicletas en Medellín, con flota, tarifas, rutas, reservas y una campaña nocturna.</p>
+            <a href="https://christian-b1998.github.io/rueda-libre/" target="_blank" rel="noopener noreferrer" class="mt-6 text-sm font-medium text-red-500 hover:text-red-400">Ver proyecto</a>
+          </article>
+
+          <article class="flex flex-col rounded-lg border border-neutral-800 bg-neutral-950 p-6 transition hover:border-red-600">
+            <h3 class="display text-xl font-semibold text-white">Riwi Task Manager</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">Hecho con IA en el curso de inteligencia artificial de Riwi, dentro de un concurso del mejor front. Gestor de tareas con panel, calendario, categorías, modo claro y oscuro, y versión en español e inglés.</p>
+            <a href="https://christian-b1998.github.io/otros/riwi-task-manager/" target="_blank" rel="noopener noreferrer" class="mt-6 text-sm font-medium text-red-500 hover:text-red-400">Ver proyecto</a>
+          </article>
+
+          <article class="flex flex-col rounded-lg border border-neutral-800 bg-neutral-950 p-6 transition hover:border-red-600">
+            <h3 class="display text-xl font-semibold text-white">Este portafolio</h3>
+            <p class="mt-3 flex-1 text-sm leading-relaxed text-neutral-400">Hecho con Tailwind. Cada sección la reescribí para entender qué hace cada clase.</p>
+            <span class="mt-6 text-sm text-neutral-500">Estás aquí</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="border-t border-neutral-900">
+      <div class="mx-auto grid max-w-5xl gap-12 px-6 py-24 md:grid-cols-3">
+        <div>
+          <h2 class="display text-3xl font-extrabold text-white">Contacto</h2>
+          <p class="mt-4 text-neutral-400">Cuéntame qué necesitas y te respondo pronto.</p>
+        </div>
+        <form class="space-y-5 md:col-span-2" action="#" method="post">
+          <div>
+            <label for="nombre" class="mb-2 block text-sm text-white">Nombre</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre"
+              class="w-full rounded-md border border-neutral-700 bg-black px-4 py-3 text-white placeholder-neutral-600 focus:border-red-600">
+          </div>
+          <div>
+            <label for="correo" class="mb-2 block text-sm text-white">Correo</label>
+            <input id="correo" name="correo" type="email" required placeholder="tu@correo.com"
+              class="w-full rounded-md border border-neutral-700 bg-black px-4 py-3 text-white placeholder-neutral-600 focus:border-red-600">
+          </div>
+          <div>
+            <label for="mensaje" class="mb-2 block text-sm text-white">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="¿En qué te puedo ayudar?"
+              class="w-full rounded-md border border-neutral-700 bg-black px-4 py-3 text-white placeholder-neutral-600 focus:border-red-600"></textarea>
+          </div>
+          <button type="submit" class="rounded-md bg-red-600 px-6 py-3 font-medium text-white transition hover:bg-red-500">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-neutral-900">
+    <div class="mx-auto flex max-w-5xl flex-col gap-3 px-6 py-8 text-sm text-neutral-500 sm:flex-row sm:justify-between">
+      <p>© 2026 Christian Camilo Benitez Gomez. Medellín, Colombia.</p>
+      <ul class="flex gap-6">
+        <li><a href="https://github.com/christian-b1998" target="_blank" rel="noopener noreferrer" class="hover:text-red-500">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
